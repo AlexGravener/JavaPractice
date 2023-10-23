@@ -11,7 +11,16 @@ public class App
         Tree sakura = new Tree();
         sakura.setGenus("Prunus");
         sakura.setName("Sakura");
-        sakura.setContinentOfOrigin("Asia");
-        System.out.println(sakura.toString());
+        sakura.setContinent("Asia");
+        System.out.println(sakura);
+
+        Tree willow = new Tree();
+        willow.setName("Willow");
+        willow.setGenus("Salix");
+        willow.setContinent("Europe");
+        System.out.println(willow);
+
+        Tree oak = new Tree("Oak", "Quercus", "Europe");
+        System.out.println(oak);
     }
 }
