@@ -3,6 +3,8 @@ package com.qa;
 public class Tree {
 
     private String Name;
+    private String Genus;
+    private String ContinentOfOrigin;
 
     public String getName() {
         return Name;
@@ -30,16 +32,12 @@ public class Tree {
 
     @Override
     public String toString(){
-        StringBuilder str = new StringBuilder();
 
-        return str.append("Tree name: ")
+        return new StringBuilder("Tree name: ")
                 .append(getName())
                 .append(", Tree genus: ")
                 .append(getGenus())
                 .append(", tree originated from continent: ")
                 .append(getContinentOfOrigin()).toString();
     }
-    private String Genus;
-    private String ContinentOfOrigin;
-
 }
