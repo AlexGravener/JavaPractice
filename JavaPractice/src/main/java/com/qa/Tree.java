@@ -20,17 +20,26 @@ public class Tree {
         this.Genus = genus;
     }
 
-    public String getCountryOfOrigin() {
-        return CountryOfOrigin;
+    public String getContinentOfOrigin() {
+        return ContinentOfOrigin;
     }
 
-    public void setCountryOfOrigin(String countryOfOrigin) {
-        this.CountryOfOrigin = countryOfOrigin;
+    public void setContinentOfOrigin(String countryOfOrigin) {
+        this.ContinentOfOrigin = countryOfOrigin;
     }
 
+    @Override
+    public String toString(){
+        StringBuilder str = new StringBuilder();
+
+        return str.append("Tree name: ")
+                .append(getName())
+                .append(", Tree genus: ")
+                .append(getGenus())
+                .append(", tree originated from continent: ")
+                .append(getContinentOfOrigin()).toString();
+    }
     private String Genus;
-    private String CountryOfOrigin;
-
-
+    private String ContinentOfOrigin;
 
 }

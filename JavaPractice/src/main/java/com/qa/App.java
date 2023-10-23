@@ -8,6 +8,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Tree sakura = new Tree();
+        sakura.setGenus("Prunus");
+        sakura.setName("Sakura");
+        sakura.setContinentOfOrigin("Asia");
+        System.out.println(sakura.toString());
     }
 }
