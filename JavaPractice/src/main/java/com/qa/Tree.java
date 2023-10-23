@@ -2,32 +2,42 @@ package com.qa;
 
 public class Tree {
 
-    private String Name;
-    private String Genus;
-    private String ContinentOfOrigin;
+    private String name;
+    private String genus;
+    private String continent;
+
+    public Tree(){
+        this("Sakura", "Prunus", "Asia");
+    }
+
+    public Tree (String name, String genus, String continent){
+        this.name = name;
+        this.genus = genus;
+        this.continent = continent;
+    }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        this.Name = name;
+        this.name = name;
     }
 
     public String getGenus() {
-        return Genus;
+        return genus;
     }
 
     public void setGenus(String genus) {
-        this.Genus = genus;
+        this.genus = genus;
     }
 
-    public String getContinentOfOrigin() {
-        return ContinentOfOrigin;
+    public String getContinent() {
+        return continent;
     }
 
-    public void setContinentOfOrigin(String countryOfOrigin) {
-        this.ContinentOfOrigin = countryOfOrigin;
+    public void setContinent(String continent) {
+        this.continent = continent;
     }
 
     @Override
@@ -38,6 +48,6 @@ public class Tree {
                 .append(", Tree genus: ")
                 .append(getGenus())
                 .append(", tree originated from continent: ")
-                .append(getContinentOfOrigin()).toString();
+                .append(getContinent()).toString();
     }
 }
