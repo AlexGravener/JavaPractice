@@ -1,5 +1,7 @@
 package com.qa;
 
+import com.tree.Tree;
+
 /**
  * Hello world!
  *
@@ -22,5 +24,11 @@ public class App
 
         Tree oak = new Tree("Oak", "Quercus", "Europe");
         System.out.println(oak);
+
+        System.out.println(Tree.photosynthesis("CO2, water, sun"));
+
+        Tree.setKingdom("Animalia");
+        if (Tree.getKingdom().equals("Animalia"))
+            System.out.println("I am an ent");
     }
 }

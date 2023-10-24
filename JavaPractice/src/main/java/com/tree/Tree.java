@@ -1,6 +1,8 @@
-package com.qa;
+package com.tree;
 
 public class Tree {
+
+    private static String kingdom = "Plantae";
 
     private String name;
     private String genus;
@@ -14,6 +16,14 @@ public class Tree {
         this.name = name;
         this.genus = genus;
         this.continent = continent;
+    }
+
+    public static String getKingdom() {
+        return kingdom;
+    }
+
+    public static void setKingdom(String kingdom) {
+        Tree.kingdom = kingdom;
     }
 
     public String getName() {
@@ -49,5 +59,12 @@ public class Tree {
                 .append(getGenus())
                 .append(", tree originated from continent: ")
                 .append(getContinent()).toString();
+    }
+
+    public static String photosynthesis(String intake){
+        if (intake.contains("sun") && intake.contains("CO2") && intake.contains("water"))
+            return "oxygen and sugar";
+        else
+            return "photNOsynthesis";
     }
 }
