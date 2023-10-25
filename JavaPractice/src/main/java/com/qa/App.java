@@ -19,6 +19,17 @@ import java.util.Arrays;
 public class App 
 {
     public static void main( String[] args ) {
+        Human Alex = new Human();
+        try{
+        extractedMethod(Alex);
+        }
+        catch(SillyBilly){
+            
+        }
+    }
+
+    private static void extractedMethod(Human Alex) {
+        System.out.println(Alex.getIqScore());
         Tree sakura = new Tree();
 
         Tree willow = new Tree();
@@ -125,6 +136,7 @@ public class App
             System.out.println(item.directionGrown());
         }
     }
+
 
 }
 

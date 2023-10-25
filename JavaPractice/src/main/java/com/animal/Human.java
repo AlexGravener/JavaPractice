@@ -19,6 +19,15 @@ public class Human extends Animal {
         super(name, weight, species);
         this.iqScore=iqScore;
     }
+
+    public double getIqScore() {
+        return iqScore;
+    }
+
+    public void setIqScore(double iqScore) {
+        this.iqScore = iqScore;
+    }
+
     private double iqScore;
 
 
