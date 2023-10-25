@@ -1,5 +1,7 @@
 package com.animal;
 
+import com.exceptions.InvalidFoodType;
+
 public abstract class Animal {
 
     public Animal(){
@@ -50,6 +52,6 @@ public abstract class Animal {
         this.species = species;
     }
 
-    public abstract String eatFood(String food);
+    public abstract String eatFood(String food) throws InvalidFoodType;
 
 }

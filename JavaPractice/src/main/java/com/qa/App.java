@@ -1,6 +1,7 @@
 package com.qa;
 
 import com.animal.Python;
+import com.exceptions.InvalidFoodType;
 import com.tree.Fruit;
 import com.tree.Tree;
 import com.animal.Human;
@@ -65,11 +66,17 @@ public class App
         teachers.add(Jordan);
         teachers.add(Codey);
 
-        for(Animal teacher : teachers){
-            System.out.println(teacher.eatFood("knowledge"));
+//        for(Animal teacher : teachers){
+//            System.out.println(teacher.eatFood("knowledge"));
+//        }
+
+        try {
+            System.out.println(Victoria.eatFood("123"));
         }
-
-
+        catch(InvalidFoodType f){
+            //log
+            System.out.println(f.getMessage());
+        }
 
     }
 }

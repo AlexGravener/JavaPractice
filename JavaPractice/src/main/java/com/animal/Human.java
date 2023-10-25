@@ -1,5 +1,7 @@
 package com.animal;
 
+import com.exceptions.InvalidFoodType;
+
 public class Human extends Animal{
     public Human() {
         this.iqScore=100.00D;
@@ -19,7 +21,16 @@ public class Human extends Animal{
 
 
     @Override
-    public String eatFood(String food) {
-        return food + " has been chewed.";
+    public String eatFood(String food) throws InvalidFoodType {
+
+        if (food.matches(".*\\d.")){
+
+        }
+
+//        if (food instanceof String){
+//            return food + " has been chewed.";
+//        }else {
+//            throw new InvalidFoodType();
+//        }
     }
 }
