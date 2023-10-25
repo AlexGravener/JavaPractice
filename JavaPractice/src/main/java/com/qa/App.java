@@ -2,6 +2,7 @@ package com.qa;
 
 import com.animal.Python;
 import com.exceptions.InvalidFoodType;
+import com.exceptions.SillyBilly;
 import com.tree.Fruit;
 import com.tree.Tree;
 import com.animal.Human;
@@ -71,12 +72,43 @@ public class App
 //        }
 
         try {
-            System.out.println(Victoria.eatFood("123"));
+            System.out.println(Victoria.eatFood("abc"));
         }
         catch(InvalidFoodType f){
             //log
             System.out.println(f.getMessage());
         }
+        catch(Exception E){
+            System.out.println("Error");
+        }
+        finally {
+            System.out.println("Was it tasty?");
+        }
 
+//        try {
+//            System.out.println(Codey.eatFood("123"));
+//        }
+//        catch(InvalidFoodType f){
+//            //log
+//            System.out.println(f.getMessage());
+//        }
+//        finally{
+//            System.out.println("ssssssssssssssss");
+//        }
+//
+//        try {
+//            System.out.println(Jordan.eatFood("chicken"));
+//        }
+//        catch(InvalidFoodType f){
+//            //log
+//            System.out.println(f.getMessage());
+//        }
+//
+//        try{
+//            System.out.println(Victoria.eatFood("200"));
+//        }
+//        catch(SillyBilly sb){
+//            System.out.println(sb.getMessage());
+//        }
     }
 }

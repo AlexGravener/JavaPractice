@@ -1,8 +1,10 @@
 package com.animal;
 
 import com.exceptions.InvalidFoodType;
+import com.exceptions.SillyBilly;
+import com.growable.IGrowable;
 
-public class Human extends Animal{
+public class Human extends Animal {
     public Human() {
         this.iqScore=100.00D;
         this.setSpecies("Human");
@@ -21,11 +23,16 @@ public class Human extends Animal{
 
 
     @Override
-    public String eatFood(String food) throws InvalidFoodType {
+    public String eatFood(String food) throws InvalidFoodType, SillyBilly {
 
         if (food.matches(".*\\d.")){
-
+            throw new InvalidFoodType();
+        } else if (food.equals("abc")) {
+            throw new SillyBilly();
+        } else{
+            return food + " has been chewed.";
         }
+
 
 //        if (food instanceof String){
 //            return food + " has been chewed.";
