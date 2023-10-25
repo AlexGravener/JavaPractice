@@ -1,5 +1,6 @@
 package com.qa;
 
+import com.tree.Fruit;
 import com.tree.Tree;
 
 import java.util.ArrayList;
@@ -11,18 +12,15 @@ import java.util.Arrays;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
+        Tree sakura = new Tree();
+
         Tree willow = new Tree();
         willow.setName("Willow");
         willow.setGenus("Salix");
         willow.setContinent("Europe");
-        System.out.println(willow);
 
-        Tree sakura = new Tree();
-        System.out.println(sakura);
         Tree oak = new Tree("Oak", "Quercus", "Europe");
-        System.out.println(oak);
 
         System.out.println(Tree.photosynthesis("CO2, water, sun"));
 
@@ -35,30 +33,24 @@ public class App
         readyMadeTrees[1] = oak;
         readyMadeTrees[2] = willow;
 
-        System.out.println(Arrays.deepToString(readyMadeTrees));
 
         Tree[] newTrees = {new Tree("Palm", "Arecaceae",
                 "S America"), new Tree("Birch", "Betula",
                 "N America, N Europe and N Asia")};
 
-        System.out.println(Arrays.deepToString(newTrees));
-
         ArrayList<Tree> coolTrees = new ArrayList<Tree>();
         coolTrees.add(sakura);
         coolTrees.add(willow);
         coolTrees.add(oak);
-        coolTrees.add(new Tree("Palm", "Arecaceae",
-                "S America"));
-        coolTrees.add(new Tree("Birch", "Betula",
-                "N America, N Europe and N Asia"));
-
-        System.out.println(coolTrees.toString());
+        coolTrees.add(newTrees[0]);
+        coolTrees.add(newTrees[1]);
 
         for(Tree tree: coolTrees) {
             System.out.println(tree.getName());
         }
 
-
-
+        Fruit strawberry = new Fruit("Strawberry", "Fragaria", "South America", 8);
+        System.out.println(strawberry);
+        System.out.println(strawberry.abstractMethod("delicious"));
     }
 }
