@@ -3,6 +3,7 @@ package com.qa;
 import com.animal.Python;
 import com.exceptions.InvalidFoodType;
 import com.exceptions.SillyBilly;
+import com.growable.IGrowable;
 import com.tree.Fruit;
 import com.tree.Tree;
 import com.animal.Human;
@@ -33,7 +34,7 @@ public class App
 //        if (Tree.getKingdom().equals("Animalia"))
 //            System.out.println("I am an ent");
 
-        Tree readyMadeTrees [] = new Tree[3];
+        Tree readyMadeTrees[] = new Tree[3];
         readyMadeTrees[0] = sakura;
         readyMadeTrees[1] = oak;
         readyMadeTrees[2] = willow;
@@ -73,15 +74,12 @@ public class App
 
         try {
             System.out.println(Victoria.eatFood("abc"));
-        }
-        catch(InvalidFoodType f){
+        } catch (InvalidFoodType f) {
             //log
             System.out.println(f.getMessage());
-        }
-        catch(Exception E){
+        } catch (Exception E) {
             System.out.println("Error");
-        }
-        finally {
+        } finally {
             System.out.println("Was it tasty?");
         }
 
@@ -110,5 +108,23 @@ public class App
 //        catch(SillyBilly sb){
 //            System.out.println(sb.getMessage());
 //        }
+
+        ArrayList<IGrowable> growables= new ArrayList<>(){
+            {new Human();
+                new Python("Pythor",17,"Numpy");
+                new Fruit("Mouldy Apple","Apple","Manchester");
+                new Fruit("Mouldy Apple","Apple","Manchester");
+                new Tree();}
+            };
+//        growables.add(new Human());
+//        growables.add(new Python("Pythor",17,"Numpy"));
+//        growables.add(new Fruit("Mouldy Apple","Apple","Manchester"));
+//        growables.add(new Tree());
+
+        for (IGrowable item : growables){
+            System.out.println(item.directionGrown());
+        }
     }
+
 }
+

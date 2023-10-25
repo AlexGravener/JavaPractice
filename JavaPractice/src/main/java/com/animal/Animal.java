@@ -2,8 +2,9 @@ package com.animal;
 
 import com.exceptions.InvalidFoodType;
 import com.exceptions.SillyBilly;
+import com.growable.IGrowable;
 
-public abstract class Animal {
+public abstract class Animal extends java.lang.Object implements IGrowable {
 
     public Animal(){
         this("Unknown Name",0,"Unknown Species");

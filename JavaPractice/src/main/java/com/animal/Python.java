@@ -26,4 +26,9 @@ public class Python extends Animal {
         }
 
     }
+
+    @Override
+    public String directionGrown() {
+        return "Pythons grow leftyrighty";
+    }
 }

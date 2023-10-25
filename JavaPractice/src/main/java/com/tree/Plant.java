@@ -1,6 +1,8 @@
 package com.tree;
 
-public abstract class Plant{
+import com.growable.IGrowable;
+
+public abstract class Plant implements IGrowable {
 //    constructors
     public Plant (String name, String genus, String continent) {
         this.name = name;
@@ -43,6 +45,11 @@ public abstract class Plant{
             return "oxygen and sugar";
         else
             return "photNOsynthesis";
+    }
+
+    @Override
+    public String directionGrown() {
+        return "All plants grow uppydownyleftyrighty (roots)";
     }
 
     public abstract String abstractMethod(String adjective);

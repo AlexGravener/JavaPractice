@@ -40,4 +40,9 @@ public class Human extends Animal {
 //            throw new InvalidFoodType();
 //        }
     }
+
+    @Override
+    public String directionGrown() {
+        return "Humans grow uppyleftyrighty";
+    }
 }
