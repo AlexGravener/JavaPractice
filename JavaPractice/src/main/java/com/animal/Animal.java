@@ -50,6 +50,6 @@ public abstract class Animal {
         this.species = species;
     }
 
-    public abstract double eatFood(String food);
+    public abstract String eatFood(String food);
 
 }
